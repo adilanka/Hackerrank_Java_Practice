@@ -1,0 +1,29 @@
+class Solution {
+    public int arraySign(int[] nums) {
+        int posnum = 0;
+        int negnum = 0;
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]>0)
+            {
+                posnum++;
+            }
+            else if(nums[i]<0)
+            {
+                negnum++;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        if(negnum%2!=0)
+        {
+            return -1;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+}
